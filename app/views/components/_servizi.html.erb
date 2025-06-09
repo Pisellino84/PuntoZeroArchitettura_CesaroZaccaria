@@ -1,0 +1,15 @@
+<div class="flex md:flex-row flex-col gap-10 mx-10 justify-center items-center ">
+    <% inEvidenza.each do |item| %>
+        <%# Card singola in evidenza con immagine di sfondo %>
+        <div class=" bg-center bg-cover md:w-150 md:h-200 w-96 h-96 rounded-xl md:rounded-lg" style="background-image: url('<%= item[:immagine] %>')";>
+            <div class="flex flex-col justify-end h-full mx-10 ">
+                <%# Titolo della card %>
+                <h1 class="text-4xl text-white font-bold w-2/3"><%= item[:titolo]%></h1>
+                <%# Bottone della card %>
+                <button class="bg-white w-fit p-3 rounded-4xl font-bold my-5">
+                    <%= item[:bottone]%>
+                </button>
+            </div>
+        </div>
+    <% end %>
+</div>

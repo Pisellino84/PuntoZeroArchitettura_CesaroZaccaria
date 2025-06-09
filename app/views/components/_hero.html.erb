@@ -1,0 +1,46 @@
+<div class="bg-cover bg-center p-10"  style="background-image: url('<%= heroImage %>');">
+  <%# Logo e Link %>
+  <div class="flex justify-between ">
+    <img src="<%= logo %>" class="size-32 ml-10"/>
+    <div class="flex flex-row text-white gap-12 h-22">
+      <div class="md:flex flex-row hidden gap-12">
+        <% heroLink.each do |text| %>
+            <h1><%= text %></h1>
+        <% end %>
+      </div>
+        <img src="/assets/icons/search.png" class="md:size-6 size-10 invert"/>
+      <div class="flex flex-row gap-6">
+        <h1 class="md:block hidden">Menu</h1>
+        <img src="/assets/icons/menu.png" class="md:size-6 size-10 invert flex items-center" />
+      </div>
+    </div>
+  </div>
+  <%# Titolo, Informazioni e Prenotazione%>
+  <div class="ml-10 text-white mt-80">
+    <%# Titolo %>
+    <p class="text-base"><%= titleSM %></p>
+    <h1 class="md:text-5xl text-3xl"><%= title %></h1>
+    <%# Informazioni e Prenotazioni%>
+    <div class="flex md:flex-row flex-col mt-12 bg-zinc-600/50 backdrop-blur w-fit py-2 md:space-y-0 space-y-4">
+      <%# Hotel %>
+      <div class="flex flex-row items-center px-4 md:border-r border-0 border-zinc-500 ">
+        <img src="<%= icon1 %>" class="size-6" style="filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(200deg);"/>
+        <div class="flex flex-col ml-3">
+          <h1 class="text-sm text-zinc-400"><%= title1 %></h1>
+          <p><%= text1 %></p>
+        </div>
+      </div>
+      <%# Partenza/Arrivo %>
+      
+      <%# Prenotazione %>
+      <div class="flex flex-row items-center px-4  justify-center">
+        <div class="bg-[#0f2573] py-3 px-9">
+          <h1><%= button1 %></h1>
+        </div>
+        <div class="bg-[#041d56] py-3 px-9">
+          <h1><%= button2 %></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

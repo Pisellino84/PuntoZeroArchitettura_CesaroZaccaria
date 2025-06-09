@@ -1,0 +1,46 @@
+<%= render partial: 'components/hero', locals: {
+    logo: "/assets/icons/logo.svg",
+    heroImage: "/assets/images/heroBg.jpg",
+    heroLink: [ "Progettazione", "Interior Design", "Ristrutturazioni", "Contatti", "IT"],
+    titleSM: "Design astratto e moderno",
+    title: "Punto Zero Architettura",
+    icon1:"/assets/icons/pin.png",
+        title1: "Dove Siamo",
+        text1: "Via Antonio Vivaldi 7, Torre di Mosto, VE 30020",
+    button1: "Preventivi",
+    button2: "Consulenze"
+} %>
+
+<%= render partial: 'components/introduzione', locals: {
+    bgImage: "/assets/images/introduzioneBG.jpg",
+    titleSM: "",
+    title1: "Punto Zero Architettura, il design del nuovo millennio",
+    text1: "",
+    title2: "Punto Zero Architettura, il design del nuovo millennio",
+    text2: "Siamo Punto Zero Architettura, uno studio dinamico e innovativo specializzato in progettazione architettonica, interior design e ristrutturazioni. Il nostro obiettivo è trasformare le vostre idee in spazi concreti, funzionali e di grande impatto estetico."
+} %>
+
+<div class="flex font-semibold my-10 justify-center items-center text-5xl text-[#041d56]">
+    <h1>I NOSTRI SERVIZI</h1>
+</div>
+<%= render partial: "components/servizi", 
+    locals: {
+        inEvidenza: [
+            { immagine: "/assets/images/progettazione.jpg", titolo: "Progettazione", bottone: "Scopri Atomo Star" },
+            { immagine: "/assets/images/interiorDesign2.jpg", titolo: "Interior Design", bottone: "Scopri Atomo Star" },
+            { immagine: "/assets/images/ristrotturazione.jpg", titolo: "Ristrutturazioni", bottone: "Scopri Atomo Star" },
+        ]
+    }
+%>
+
+<%= render partial: "components/team", locals: {
+    icona1: "/images/diadora/camion.png",
+    icona2: "/images/diadora/headphone2.png",
+    icona3: "/images/diadora/resi.png",
+    titolo1: "Spedizione on demand disponibile",
+    titolo2: "Servizio clienti sempre attivo",
+    titolo3: "Resi gratuiti entro 30 giorni",
+    testo1: "Scopri il servizio",
+    testo2: "Contattaci",
+    testo3: "Scopri di più",
+}%>
