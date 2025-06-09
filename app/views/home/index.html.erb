@@ -20,8 +20,8 @@
     text2: "Siamo Punto Zero Architettura, uno studio dinamico e innovativo specializzato in progettazione architettonica, interior design e ristrutturazioni. Il nostro obiettivo è trasformare le vostre idee in spazi concreti, funzionali e di grande impatto estetico."
 } %>
 
-<div class="flex font-semibold my-10 justify-center items-center text-5xl text-[#041d56]">
-    <h1>I NOSTRI SERVIZI</h1>
+<div class="flex font-semibold my-10 mt-20 justify-center items-center text-4xl text-[#041d56]">
+    <h1>I Nostri Servizi</h1>
 </div>
 <%= render partial: "components/servizi", 
     locals: {
@@ -32,15 +32,31 @@
         ]
     }
 %>
-
+<div class="mt-10"></div>
 <%= render partial: "components/team", locals: {
-    icona1: "/images/diadora/camion.png",
-    icona2: "/images/diadora/headphone2.png",
-    icona3: "/images/diadora/resi.png",
-    titolo1: "Spedizione on demand disponibile",
-    titolo2: "Servizio clienti sempre attivo",
-    titolo3: "Resi gratuiti entro 30 giorni",
-    testo1: "Scopri il servizio",
-    testo2: "Contattaci",
-    testo3: "Scopri di più",
+    icona1: "/assets/icons/people.png",
+    icona2: "/assets/icons/matita.png",
+    icona3: "/assets/icons/quality.png",
+    titolo1: "Team di esperti sempre disponibili",
+    titolo2: "Designers creativi e professionali",
+    titolo3: "Ristrutturazioni di alta qualità",
+    testo1: "",
+    testo2: "",
+    testo3: "",
+}%>
+
+<div class='text-center mt-20 md:py-96 py-32 bg-[url("/assets/images/introduzioneBg.jpg")] bg-cover bg-center' style="background-color: rgba(0, 0, 0, 0.5);  background-blend-mode: darken;">
+    <h1 class="text-4xl font-semibold mb-4 text-white">Tutte le novità. Iscriveti alla Newsletter</h1>
+    <div class="flex justify-center">
+        <div class="flex flex-row border border-zinc-300 p-1 rounded-full pl-5 w-fit bg-white">
+            <input type="text" placeHolder="Inserisci il tuo indirizzo e-mail" class="w-96 text-black">
+            <div class="bg-zinc-800 p-2 rounded-full">
+                <img src="/assets/icons/right-arrow.png" class="size-6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<%= render partial: "components/footer", locals: {
+    copyright: "Copyright 2021-2024 Punto Zero Architettura S.r.l. All rights are reserved"
 }%>
