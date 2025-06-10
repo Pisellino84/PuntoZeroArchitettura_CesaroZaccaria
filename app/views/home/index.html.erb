@@ -1,7 +1,31 @@
+
+<!-- HERO -->
 <%= render partial: 'components/hero', locals: {
     logo: "/assets/icons/logo.svg",
     heroImage: "/assets/images/heroBg.jpg",
-    heroLink: [ "Progettazione", "Interior Design", "Ristrutturazioni", "Contatti", "IT"],
+    heroLink: [
+        {
+            text: "Progettazione", 
+        }, 
+            
+        {
+            text: "Interior Design", 
+            urlLink: "interiordesign"
+        },
+        
+        {
+            text:"Ristrutturazioni"
+        }, 
+
+        {
+            text:"Contatti"
+            
+        }, 
+        
+        {
+            text:"IT"
+        }
+    ],
     titleSM: "Design astratto e moderno",
     title: "Punto Zero Architettura",
     icon1:"/assets/icons/pin.png",
@@ -10,7 +34,7 @@
     button1: "Preventivi",
     button2: "Consulenze"
 } %>
-
+<!-- INTRODUZIONE -->
 <%= render partial: 'components/introduzione', locals: {
     bgImage: "/assets/images/introduzioneBG.jpg",
     titleSM: "",
@@ -23,6 +47,7 @@
     <div class="flex font-semibold pb-20 justify-center items-center text-5xl text-white">
         <h1>I Nostri Servizi</h1>
     </div>
+    <!-- SERVIZI -->
     <%= render partial: "components/servizi", 
         locals: {
             inEvidenza: [
@@ -32,6 +57,7 @@
             ]
         }
     %>
+    <!-- TEAM -->
     <div class="my-32 rounded-xl w-full flex justify-center items-center">
         <div class="bg-white w-fit px-10 rounded-2xl">
             <%= render partial: "components/team", locals: {
@@ -48,11 +74,12 @@
         </div>
     </div>
 </div>
+<!-- NEWSLETTER -->
 <div class='text-center pt-20 md:py-56 py-32 bg-[url("/assets/images/introduzioneBg.jpg")] bg-cover bg-center' style="background-color: rgba(0, 0, 0, 0.5);  background-blend-mode: darken;">
     <h1 class="text-4xl font-semibold mb-4 text-white">Tutte le novità. Iscriveti alla Newsletter</h1>
     <div class="flex justify-center">
         <div class="flex flex-row border border-zinc-300 p-1 rounded-full pl-5 w-fit bg-white">
-            <input type="text" placeHolder="Inserisci il tuo indirizzo e-mail" class="w-96 text-black">
+            <input type="text" placeHolder="example@gmail.com" class="w-96 text-black">
             <div class="bg-zinc-800 p-2 rounded-full">
                 <img src="/assets/icons/right-arrow.png" class="size-6">
             </div>
@@ -60,6 +87,7 @@
     </div>
 </div>
 
+<!-- FOOTER -->
 <%= render partial: "components/footer", locals: {
-    copyright: "Copyright 2021-2024 Punto Zero Architettura S.r.l. All rights are reserved"
+    copyright: "Copyright 1986-2025 Punto Zero Architettura S.r.l. All rights are reserved"
 }%>

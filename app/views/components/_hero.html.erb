@@ -1,11 +1,13 @@
 <div class="bg-cover bg-center p-10"  style="background-image: url('<%= heroImage %>');">
   <%# Logo e Link %>
   <div class="flex justify-between ">
-    <img src="<%= logo %>" class="size-32 ml-10"/>
+    <a href="/">
+      <img src="<%= logo %>" class="size-32 ml-10"/>
+    </a>
     <div class="flex flex-row text-white gap-12 h-22">
       <div class="md:flex flex-row hidden gap-12">
-        <% heroLink.each do |text| %>
-            <h1><%= text %></h1>
+        <% heroLink.each do |item| %>
+            <a href="<%= item[:urlLink] %>"><h1><%= item[:text] %></h1></a>
         <% end %>
       </div>
         <img src="/assets/icons/search.png" class="md:size-6 size-10 invert"/>
