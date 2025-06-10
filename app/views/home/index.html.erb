@@ -19,33 +19,36 @@
     title2: "Punto Zero Architettura, il design del nuovo millennio",
     text2: "Siamo Punto Zero Architettura, uno studio dinamico e innovativo specializzato in progettazione architettonica, interior design e ristrutturazioni. Il nostro obiettivo è trasformare le vostre idee in spazi concreti, funzionali e di grande impatto estetico."
 } %>
-
-<div class="flex font-semibold my-10 mt-20 justify-center items-center text-4xl text-[#041d56]">
-    <h1>I Nostri Servizi</h1>
+<div class="bg-[url('/assets/images/bg.jpg')] bg-cover py-20">
+    <div class="flex font-semibold pb-20 justify-center items-center text-5xl text-white">
+        <h1>I Nostri Servizi</h1>
+    </div>
+    <%= render partial: "components/servizi", 
+        locals: {
+            inEvidenza: [
+                { immagine: "/assets/images/progettazione.jpg", titolo: "Progettazione", bottone: "Scopri di più" },
+                { immagine: "/assets/images/interiorDesign2.jpg", titolo: "Interior Design", bottone: "Scopri di più", url: "interiordesign.path" },
+                { immagine: "/assets/images/ristrotturazione.jpg", titolo: "Ristrutturazioni", bottone: "Scopri di più" },
+            ]
+        }
+    %>
+    <div class="my-32 rounded-xl w-full flex justify-center items-center">
+        <div class="bg-white w-fit px-10 rounded-2xl">
+            <%= render partial: "components/team", locals: {
+                icona1: "/assets/icons/people.png",
+                icona2: "/assets/icons/matita.png",
+                icona3: "/assets/icons/quality.png",
+                titolo1: "Team di esperti sempre disponibili",
+                titolo2: "Designers creativi e professionali",
+                titolo3: "Ristrutturazioni effetuate da operai qualificati",
+                testo1: "",
+                testo2: "",
+                testo3: "",
+            }%>
+        </div>
+    </div>
 </div>
-<%= render partial: "components/servizi", 
-    locals: {
-        inEvidenza: [
-            { immagine: "/assets/images/progettazione.jpg", titolo: "Progettazione", bottone: "Scopri Atomo Star" },
-            { immagine: "/assets/images/interiorDesign2.jpg", titolo: "Interior Design", bottone: "Scopri Atomo Star" },
-            { immagine: "/assets/images/ristrotturazione.jpg", titolo: "Ristrutturazioni", bottone: "Scopri Atomo Star" },
-        ]
-    }
-%>
-<div class="mt-10"></div>
-<%= render partial: "components/team", locals: {
-    icona1: "/assets/icons/people.png",
-    icona2: "/assets/icons/matita.png",
-    icona3: "/assets/icons/quality.png",
-    titolo1: "Team di esperti sempre disponibili",
-    titolo2: "Designers creativi e professionali",
-    titolo3: "Ristrutturazioni di alta qualità",
-    testo1: "",
-    testo2: "",
-    testo3: "",
-}%>
-
-<div class='text-center mt-20 md:py-56 py-32 bg-[url("/assets/images/introduzioneBg.jpg")] bg-cover bg-center' style="background-color: rgba(0, 0, 0, 0.5);  background-blend-mode: darken;">
+<div class='text-center pt-20 md:py-56 py-32 bg-[url("/assets/images/introduzioneBg.jpg")] bg-cover bg-center' style="background-color: rgba(0, 0, 0, 0.5);  background-blend-mode: darken;">
     <h1 class="text-4xl font-semibold mb-4 text-white">Tutte le novità. Iscriveti alla Newsletter</h1>
     <div class="flex justify-center">
         <div class="flex flex-row border border-zinc-300 p-1 rounded-full pl-5 w-fit bg-white">
